@@ -86,7 +86,7 @@ The **Library Management System** is a web application developed on the **Frappe
 
 **Screenshot:**
 
-![Add New Book](screenshots/add_book.png)
+![Add New Book](screenshots/book-1.png)
 
 ---
 
@@ -166,7 +166,3 @@ The **Library Management System** is a web application developed on the **Frappe
 ![Manage Settings](screenshots/manage_settings.png)
 
 ---
-
-## Conclusion
-
-The **Library Management System** is designed to streamline the daily operations of a library. With intuitive features for managing books, members, transactions, and reservations, the system helps libraries operate more efficiently. The advanced reporting and analytics capabilities provide insights into borrowing trends, financial transactions, and inventory, allowing for data-driven decision-making.
