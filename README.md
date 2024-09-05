@@ -99,7 +99,7 @@ The **Library Management System** is a web application developed on the **Frappe
 
 **Screenshot:**
 
-![Register New Member](screenshots/add_member.png)
+![Register New Member](screenshots/member-2.png)
 
 ---
 
