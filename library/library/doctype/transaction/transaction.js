@@ -3,32 +3,33 @@
 
 frappe.ui.form.on("Transaction", {
 	refresh(frm) {
+		if (!frm.doc.date) {
+			frm.set_value("date", frappe.datetime.get_today());
+		}
+
 		if (frm.is_new()) {
 			return;
 		}
 
-		// Calculate fees
-		frappe.call({
-			method: "library.library.doctype.transaction.transaction.calculate_fees",
-			args: {
-				transaction_name: frm.doc.name,
-			},
-			callback: function (response) {
-				if (response.message) {
-					frm.set_value("rent_fee_incurred", response.message.rent_fee_incurred);
-					frm.set_value("late_fee_incurred", response.message.late_fee_incurred);
-					frm.set_value("total_fee", response.message.total_fee);
-				}
-			},
+		frm.add_custom_button(__("Update Fees"), function () {
+			frappe.call({
+				method: "library.library.doctype.transaction.transaction.calculate_fees",
+				args: {
+					transaction_name: frm.doc.name,
+				},
+				callback: function (response) {
+					if (response.message) {
+						update_payment_status(frm);
+					}
+				},
+			});
 		});
 
-		// Update status if overdue
 		if (frm.doc.status == "Issue" && frappe.datetime.get_today() > frm.doc.due_date) {
 			frm.set_value("status", "Overdue");
 			frm.save_or_update();
 		}
 
-		// Show overdue warning
 		if (frm.doc.status == "Overdue") {
 			frappe.msgprint({
 				title: __("Overdue Warning"),
@@ -37,28 +38,71 @@ frappe.ui.form.on("Transaction", {
 			});
 		}
 
-		// Add "Return" button if not returned
 		if (frm.doc.status !== "Returned") {
-			frm.add_custom_button(__("Return"), function () {
-				frm.set_value("status", "Returned");
-				frm.save_or_update();
-				frappe.msgprint({
-					title: __("Book Returned"),
-					indicator: "green",
-					message: __("The book has been returned successfully."),
+			frm.add_custom_button(__("Return Books"), function () {
+				frappe.call({
+					method: "library.library.doctype.transaction.transaction.return_books",
+					args: {
+						transaction_name: frm.doc.name,
+					},
+					callback: function (response) {
+						if (response.message) {
+							frm.refresh();
+							frappe.msgprint({
+								title: __("Books Returned"),
+								indicator: "green",
+								message: __("The books have been successfully returned."),
+							});
+						}
+					},
 				});
 			});
 		}
 
-		// Check if the total payments cover the total cost and update `doc.paid`
-		update_payment_status(frm);
-
-		// Show "Make Payment" button only if `doc.paid` is not 1
 		if (frm.doc.paid !== 1 && frm.doc.status == "Returned") {
 			frm.add_custom_button(__("Make Payment"), function () {
 				show_payment_dialog(frm);
 			});
 		}
+	},
+
+	member: function (frm) {
+		frappe.call({
+			method: "frappe.client.get",
+			args: {
+				doctype: "My Settings",
+				name: "My Settings",
+			},
+			callback: function (response) {
+				if (response.message) {
+					let max_debt_limit = response.message.max_debt_limit;
+
+					// Call the update_debt method and check against max_debt_limit
+					frappe.call({
+						method: "library.library.doctype.member.member.update_debt",
+						args: {
+							member_name: frm.doc.member,
+						},
+						callback: function (response) {
+							let total_debt = response.message;
+
+							if (total_debt > max_debt_limit) {
+								// Disable the save button
+								frm.disable_save();
+								frappe.throw({
+									title: __("Debt Limit Exceeded"),
+									message: __(
+										"The member's total debt exceeds the limit of Ksh. " +
+											max_debt_limit +
+											". Please clear outstanding payments before proceeding."
+									),
+								});
+							}
+						},
+					});
+				}
+			},
+		});
 	},
 });
 
@@ -88,14 +132,11 @@ function show_payment_dialog(frm) {
 				},
 				callback: function (response) {
 					if (response.message) {
-						// Add the newly created payment to the payments child table
-						let new_row = frm.add_child("payments"); // Assuming the child table field is "payments"
-						new_row.payment = response.message.name; // Link the payment doc to the child table
-						frm.refresh_field("payments"); // Refresh the payments child table to show the new row
+						let new_row = frm.add_child("payments");
+						new_row.payment = response.message.name;
+						frm.refresh_field("payments");
 
-						// Save the form to persist the changes
 						frm.save().then(() => {
-							// Update the payment status
 							update_payment_status(frm).then(() => {
 								frappe.msgprint({
 									title: __("Payment Created"),
@@ -137,7 +178,7 @@ function update_payment_status(frm) {
 					frm.set_value("paid", 0);
 				}
 
-				frm.save_or_update(); // Save the form after updating the paid status
+				frm.save_or_update();
 			}
 		},
 	});

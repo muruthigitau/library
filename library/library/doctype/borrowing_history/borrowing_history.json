@@ -7,10 +7,10 @@
  "field_order": [
   "book",
   "date_borrowed",
-  "copies",
   "column_break_swjz",
   "status",
-  "return_date"
+  "return_date",
+  "copies"
  ],
  "fields": [
   {
@@ -32,7 +32,7 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Date Borrowed",
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "column_break_swjz",
@@ -53,7 +53,8 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Return Date"
+   "label": "Return Date",
+   "read_only": 1
   },
   {
    "default": "1",
@@ -70,7 +71,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-09-05 12:08:37.309800",
+ "modified": "2024-09-05 14:08:03.556239",
  "modified_by": "Administrator",
  "module": "Library",
  "name": "Borrowing History",
