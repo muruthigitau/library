@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{isbn} - {title}",
+ "creation": "2024-09-03 06:44:23.070721",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "isbn",
+  "publisher",
+  "language",
+  "available_copies",
+  "cost",
+  "cover_image",
+  "column_break_otal",
+  "author",
+  "genre",
+  "published_year",
+  "total_copies",
+  "rent_fee_per_day",
+  "late_fee_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ISBN",
+   "reqd": 1
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Link",
+   "label": "Publisher",
+   "options": "Publisher",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_otal",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Author",
+   "options": "Author",
+   "reqd": 1
+  },
+  {
+   "fieldname": "published_year",
+   "fieldtype": "Int",
+   "label": "Published Year "
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Select",
+   "label": "Language",
+   "options": "English\nSwahili\nFrench"
+  },
+  {
+   "fieldname": "available_copies",
+   "fieldtype": "Int",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Available Copies",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "cover_image",
+   "fieldtype": "Attach Image",
+   "label": "Cover Image"
+  },
+  {
+   "fieldname": "total_copies",
+   "fieldtype": "Int",
+   "label": "Total Copies"
+  },
+  {
+   "fieldname": "rent_fee_per_day",
+   "fieldtype": "Currency",
+   "label": "Rent Fee Per Day (KES)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "genre",
+   "fieldtype": "Table MultiSelect",
+   "label": "Genre",
+   "options": "Book Genre"
+  },
+  {
+   "fieldname": "late_fee_rate",
+   "fieldtype": "Currency",
+   "label": "Late Fee Per Day (KES)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Cost"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-03 15:47:45.614075",
+ "modified_by": "Administrator",
+ "module": "Library",
+ "name": "Book",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

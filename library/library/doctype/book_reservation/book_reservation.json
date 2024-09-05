@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "autoname": "format:{member} - {####}",
+ "creation": "2024-09-03 07:17:36.031498",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "status",
+  "column_break_pieu",
+  "member",
+  "transaction",
+  "section_break_ittk",
+  "book_list"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pieu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Member",
+   "options": "Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Reserved\nCancelled\nFulfilled"
+  },
+  {
+   "fieldname": "section_break_ittk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "book_list",
+   "fieldtype": "Table",
+   "label": "Book List",
+   "options": "Borrowing History"
+  },
+  {
+   "fieldname": "transaction",
+   "fieldtype": "Link",
+   "label": "Transaction",
+   "options": "Transaction",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-05 12:07:13.944124",
+ "modified_by": "Administrator",
+ "module": "Library",
+ "name": "Book Reservation",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

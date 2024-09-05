@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-03 07:16:00.404196",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "max_debt_limit",
+  "max_lease_days",
+  "column_break_zlcn",
+  "late_fee_per_day"
+ ],
+ "fields": [
+  {
+   "fieldname": "max_debt_limit",
+   "fieldtype": "Currency",
+   "label": "Max Debt Limit (KSH)"
+  },
+  {
+   "fieldname": "column_break_zlcn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "late_fee_per_day",
+   "fieldtype": "Currency",
+   "label": "Late Fee Per Day (KSH)"
+  },
+  {
+   "fieldname": "max_lease_days",
+   "fieldtype": "Int",
+   "label": "Max Lease Days"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-05 11:24:30.821934",
+ "modified_by": "Administrator",
+ "module": "Library",
+ "name": "My Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

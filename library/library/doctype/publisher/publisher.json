@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:publisher_name",
+ "creation": "2024-09-03 07:27:57.171658",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "publisher_name",
+  "email",
+  "address",
+  "column_break_gxdr",
+  "phone",
+  "website"
+ ],
+ "fields": [
+  {
+   "fieldname": "publisher_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Publisher Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_gxdr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-03 07:58:05.820282",
+ "modified_by": "Administrator",
+ "module": "Library",
+ "name": "Publisher",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

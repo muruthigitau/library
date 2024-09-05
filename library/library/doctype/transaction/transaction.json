@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{member} - {#####}",
+ "creation": "2024-09-03 07:05:12.016282",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "member",
+  "date",
+  "rent_fee_incurred",
+  "total_fee",
+  "column_break_mqxe",
+  "status",
+  "due_date",
+  "late_fee_incurred",
+  "paid",
+  "section_break_fksz",
+  "book_list",
+  "payments"
+ ],
+ "fields": [
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Member",
+   "options": "Member",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "rent_fee_incurred",
+   "fieldtype": "Currency",
+   "label": "Rent Fee Incurred",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_fee",
+   "fieldtype": "Currency",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Total Fee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mqxe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "late_fee_incurred",
+   "fieldtype": "Currency",
+   "label": "Late Fee Incurred",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_fksz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Issue",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Issue\nReturned\nOverdue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "book_list",
+   "fieldtype": "Table",
+   "label": "Books Issued",
+   "options": "Borrowing History"
+  },
+  {
+   "default": "Not Paid",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Paid",
+   "options": "Not Paid\nPaid"
+  },
+  {
+   "fieldname": "payments",
+   "fieldtype": "Table",
+   "label": "Payments",
+   "options": "Payment List",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-05 12:25:03.608565",
+ "modified_by": "Administrator",
+ "module": "Library",
+ "name": "Transaction",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
