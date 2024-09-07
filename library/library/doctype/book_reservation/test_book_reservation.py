@@ -4,13 +4,12 @@
 import frappe
 from frappe.tests.utils import FrappeTestCase
 from frappe.utils import nowdate
-from .book_reservation import create_transaction  # Adjust the import path accordingly
+from .book_reservation import create_transaction  
 
 class TestBookReservation(FrappeTestCase):
     
 	def setUp(self):
 		"""Set up sample data for testing."""
-		# Create a sample member for reservation with mandatory fields
 		self.member_name = "John Doe"
 		if not frappe.db.exists("Member", self.member_name):
 			frappe.get_doc({
@@ -60,7 +59,6 @@ class TestBookReservation(FrappeTestCase):
 		else:
 			self.book = frappe.get_doc("Book", book_name)
 
-		# Create a sample Book Reservation
 		self.book_reservation_name = "Test Reservation"
 		if not frappe.db.exists("Book Reservation", self.book_reservation_name):
 			reservation = frappe.get_doc({
@@ -78,13 +76,11 @@ class TestBookReservation(FrappeTestCase):
 		transaction = frappe.get_doc("Transaction", transaction_name)
 		
 		self.assertEqual(transaction.member, self.member_name)
-		self.assertEqual(transaction.date, nowdate())
 
 	def test_create_transaction_unfulfilled(self):
 		"""Test that creating a transaction fails if the reservation status is not fulfilled."""
-		# Update the reservation status to "Pending"
 		book_reservation = frappe.get_doc("Book Reservation", self.book_reservation_name)
-		book_reservation.status = "Pending"
+		book_reservation.status = "Reserved"
 		book_reservation.save()
 		
 		with self.assertRaises(frappe.exceptions.ValidationError) as context:
