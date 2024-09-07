@@ -37,32 +37,43 @@ class TestPublisher(FrappeTestCase):
         self.assertEqual(publisher.phone, "0987654321")
         self.assertEqual(publisher.address, "456 Sample St")
         self.assertEqual(publisher.website, "https://samplepublisher.com")
-
+        
     def test_required_fields(self):
         """Test validation of required fields like publisher_name."""
         publisher = frappe.get_doc({
-            "doctype": "Publisher",
-            "email": "publisher.without.name@example.com",
-            "phone": "1122334455"
-        })
-        with self.assertRaises(frappe.exceptions.MandatoryError):
+			"doctype": "Publisher",
+			"email": "publisher.without.name@example.com",
+			"phone": "1122334455"
+		})
+        with self.assertRaises(frappe.ValidationError) as context:
             publisher.insert()
+
+        self.assertTrue("Publisher Name is required" in str(context.exception))
+
 
     def test_unique_publisher_name(self):
         """Test if duplicate publisher names are prevented."""
+        unique_publisher_name = "Unique Publisher Name"
         publisher = frappe.get_doc({
             "doctype": "Publisher",
-            "publisher_name": "Test Publisher",
-            "email": "duplicate.publisher@example.com",
+            "publisher_name": unique_publisher_name,
+            "email": "unique.publisher@example.com",
             "phone": "9876543210"
         })
+        publisher.insert()
 
-        with self.assertRaises(frappe.exceptions.UniqueValidationError):
-            publisher.insert()
+        duplicate_publisher = frappe.get_doc({
+            "doctype": "Publisher",
+            "publisher_name": unique_publisher_name,
+            "email": "duplicate.publisher@example.com",
+            "phone": "1234567890"
+        })
+
+        with self.assertRaises(frappe.exceptions.DuplicateEntryError):
+            duplicate_publisher.insert()
 
     def tearDown(self):
         if frappe.db.exists("Publisher", "Sample Publisher"):
             frappe.delete_doc("Publisher", "Sample Publisher")
         if frappe.db.exists("Publisher", "Test Publisher"):
             frappe.delete_doc("Publisher", "Test Publisher")
-

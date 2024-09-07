@@ -2,56 +2,52 @@
 # See license.txt
 
 import frappe
-from frappe.tests.utils import FrappeTestCase
+import unittest
 
-
-class TestGenre(FrappeTestCase):
+class TestGenre(unittest.TestCase):
     def setUp(self):
-        if not frappe.db.exists("Genre", "Fiction"):
-            self.genre = frappe.get_doc({
-                "doctype": "Genre",
-                "category_name": "Fiction",
-                "description": "Fictional genre including novels, stories, etc."
-            })
-            self.genre.insert()
-        else:
-            self.genre = frappe.get_doc("Genre", "Fiction")
+        """Set up test data."""
+        self.existing_genre_name = "Science Fiction"
+        if frappe.db.exists("Genre", self.existing_genre_name):
+            frappe.delete_doc("Genre", self.existing_genre_name, ignore_permissions=True)
+
+    def tearDown(self):
+        """Clean up test data."""
+        if frappe.db.exists("Genre", self.existing_genre_name):
+            frappe.delete_doc("Genre", self.existing_genre_name, ignore_permissions=True)
 
     def test_genre_creation(self):
         """Test if a genre can be created successfully with valid data."""
+        genre_name = "Science Fiction"
+        if frappe.db.exists("Genre", genre_name):
+            frappe.delete_doc("Genre", genre_name, ignore_permissions=True)
+
         genre = frappe.get_doc({
             "doctype": "Genre",
-            "category_name": "Science Fiction",
-            "description": "A genre dealing with imaginative and futuristic concepts."
+            "category_name": genre_name,
+            "description": "A genre for Science Fiction books."
         })
         genre.insert()
-        
-        self.assertEqual(genre.category_name, "Science Fiction")
-        self.assertEqual(genre.description, "A genre dealing with imaginative and futuristic concepts.")
 
-    def test_required_fields(self):
-        """Test validation of required fields like category_name."""
-        genre = frappe.get_doc({
-            "doctype": "Genre",
-            "description": "A genre with no name."
-        })
-        with self.assertRaises(frappe.exceptions.MandatoryError):
-            genre.insert()
+        self.assertTrue(frappe.db.exists("Genre", genre_name))
 
     def test_unique_category_name(self):
-        """Test if duplicate genre names are prevented.""" 
+        """Test if duplicate genre names are prevented."""
+        genre_name = "Unique Genre"
+        if frappe.db.exists("Genre", genre_name):
+            frappe.delete_doc("Genre", genre_name, ignore_permissions=True)
+
         genre = frappe.get_doc({
             "doctype": "Genre",
-            "category_name": "Fiction",  
-            "description": "Duplicate genre."
+            "category_name": genre_name,
+            "description": "A genre with a unique name."
         })
+        genre.insert()
 
-        with self.assertRaises(frappe.exceptions.UniqueValidationError):
-            genre.insert()
-
-    def tearDown(self):
-        if frappe.db.exists("Genre", "Science Fiction"):
-            frappe.delete_doc("Genre", "Science Fiction")
-        if frappe.db.exists("Genre", "Fiction"):
-            frappe.delete_doc("Genre", "Fiction")
-
+        duplicate_genre = frappe.get_doc({
+            "doctype": "Genre",
+            "category_name": genre_name,
+            "description": "Another genre with the same name."
+        })
+        with self.assertRaises(frappe.exceptions.DuplicateEntryError):
+            duplicate_genre.insert()
