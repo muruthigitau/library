@@ -225,7 +225,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-05 20:08:56.325002",
+  "modified": "2024-09-09 11:14:21.876781",
   "module": "Setup",
   "name": "Home",
   "number_cards": [],
@@ -921,7 +921,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.418907",
+  "modified": "2024-09-09 11:14:21.899785",
   "module": "CRM",
   "name": "CRM",
   "number_cards": [],
@@ -1874,7 +1874,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.401743",
+  "modified": "2024-09-09 11:14:21.885214",
   "module": "Selling",
   "name": "Selling",
   "number_cards": [],
@@ -1883,7 +1883,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 9.0,
+  "sequence_id": 10.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -2690,7 +2690,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.399145",
+  "modified": "2024-09-09 11:14:21.881903",
   "module": "Buying",
   "name": "Buying",
   "number_cards": [],
@@ -3154,7 +3154,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.417007",
+  "modified": "2024-09-09 11:14:21.898028",
   "module": "Website",
   "name": "Website",
   "number_cards": [],
@@ -3686,7 +3686,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.419823",
+  "modified": "2024-09-09 11:14:21.900641",
   "module": "Automation",
   "name": "Tools",
   "number_cards": [],
@@ -3976,7 +3976,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.416060",
+  "modified": "2024-09-09 11:14:21.897254",
   "module": "Core",
   "name": "Users",
   "number_cards": [],
@@ -4343,7 +4343,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.422693",
+  "modified": "2024-09-09 11:14:21.902413",
   "module": "Integrations",
   "name": "Integrations",
   "number_cards": [],
@@ -5185,7 +5185,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.395382",
+  "modified": "2024-09-09 11:14:21.878612",
   "module": "Accounts",
   "name": "Accounting",
   "number_cards": [
@@ -6415,7 +6415,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.403895",
+  "modified": "2024-09-09 11:14:21.886893",
   "module": "Stock",
   "name": "Stock",
   "number_cards": [
@@ -6437,7 +6437,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 11.0,
+  "sequence_id": 12.0,
   "shortcuts": [
    {
     "color": "Green",
@@ -6833,7 +6833,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.404780",
+  "modified": "2024-09-09 11:14:21.887876",
   "module": "Assets",
   "name": "Assets",
   "number_cards": [],
@@ -6842,7 +6842,7 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 12.0,
+  "sequence_id": 13.0,
   "shortcuts": [
    {
     "color": null,
@@ -7173,7 +7173,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.413246",
+  "modified": "2024-09-09 11:14:21.894569",
   "module": "Projects",
   "name": "Projects",
   "number_cards": [],
@@ -7519,7 +7519,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.415115",
+  "modified": "2024-09-09 11:14:21.896415",
   "module": "Support",
   "name": "Support",
   "number_cards": [],
@@ -8146,7 +8146,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-10-10 16:55:59.080694",
+  "modified": "2024-09-09 11:14:21.882767",
   "module": "HR",
   "name": "HR",
   "number_cards": [],
@@ -8460,7 +8460,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.410227",
+  "modified": "2024-09-09 11:14:21.892371",
   "module": "Quality Management",
   "name": "Quality",
   "number_cards": [],
@@ -9001,7 +9001,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.408409",
+  "modified": "2024-09-09 11:14:21.890640",
   "module": "Manufacturing",
   "name": "Manufacturing",
   "number_cards": [],
@@ -9239,7 +9239,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.417982",
+  "modified": "2024-09-09 11:14:21.898904",
   "module": "Payroll",
   "name": "Payroll",
   "number_cards": [],
@@ -9908,7 +9908,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.420960",
+  "modified": "2024-09-09 11:14:21.901530",
   "module": "Setup",
   "name": "Settings",
   "number_cards": [],
@@ -10287,7 +10287,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.397287",
+  "modified": "2024-09-09 11:14:21.880277",
   "module": "HR",
   "name": "Recruitment",
   "number_cards": [],
@@ -10808,7 +10808,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.402996",
+  "modified": "2024-09-09 11:14:21.886003",
   "module": "HR",
   "name": "Employee Lifecycle",
   "number_cards": [],
@@ -10833,7 +10833,7 @@
   ],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 10.0,
+  "sequence_id": 11.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -11224,7 +11224,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.406575",
+  "modified": "2024-09-09 11:14:21.889740",
   "module": "HR",
   "name": "Shift & Attendance",
   "number_cards": [],
@@ -11233,7 +11233,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 14.0,
+  "sequence_id": 15.0,
   "shortcuts": [
    {
     "color": "Grey",
@@ -11587,7 +11587,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.414193",
+  "modified": "2024-09-09 11:14:21.895549",
   "module": "HR",
   "name": "Leaves",
   "number_cards": [],
@@ -11896,7 +11896,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.405717",
+  "modified": "2024-09-09 11:14:21.888846",
   "module": "HR",
   "name": "Performance",
   "number_cards": [],
@@ -11905,7 +11905,7 @@
   "quick_lists": [],
   "restrict_to_domain": null,
   "roles": [],
-  "sequence_id": 13.0,
+  "sequence_id": 14.0,
   "shortcuts": [
    {
     "color": "Orange",
@@ -12343,7 +12343,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.409272",
+  "modified": "2024-09-09 11:14:21.891513",
   "module": "HR",
   "name": "Expense Claims",
   "number_cards": [],
@@ -12965,7 +12965,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.412200",
+  "modified": "2024-09-09 11:14:21.893204",
   "module": "Payroll",
   "name": "Salary Payout",
   "number_cards": [],
@@ -13227,7 +13227,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.423637",
+  "modified": "2024-09-09 11:14:21.903396",
   "module": "Payroll",
   "name": "Tax & Benefits",
   "number_cards": [],
@@ -13519,7 +13519,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.396363",
+  "modified": "2024-09-09 11:14:21.879453",
   "module": "Accounts",
   "name": "Payables",
   "number_cards": [],
@@ -13869,7 +13869,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.398249",
+  "modified": "2024-09-09 11:14:21.881073",
   "module": "Accounts",
   "name": "Receivables",
   "number_cards": [],
@@ -14320,7 +14320,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.400192",
+  "modified": "2024-09-09 11:14:21.884147",
   "module": "Accounts",
   "name": "Financial Reports",
   "number_cards": [],
@@ -14329,9 +14329,114 @@
   "quick_lists": [],
   "restrict_to_domain": "",
   "roles": [],
-  "sequence_id": 8.0,
+  "sequence_id": 9.0,
   "shortcuts": [],
   "title": "Financial Reports"
+ },
+ {
+  "charts": [],
+  "content": "[{\"id\":\"b9PFdys0HS\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"IjB9-kUXZp\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Shortcuts</span>\",\"col\":12}},{\"id\":\"gcxfPrV17k\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Product\",\"col\":3}},{\"id\":\"nDLksVs7-C\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stocks Ledger Entry\",\"col\":3}},{\"id\":\"y7r4-Ruw3F\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stocks Entry\",\"col\":3}},{\"id\":\"abjRBzreKG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Warehouse\",\"col\":3}},{\"id\":\"-sW582QmNG\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"SU0bNaYRsR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports</b></span>\",\"col\":12}},{\"id\":\"Z8bea4URI0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stocks Ledger\",\"col\":3}},{\"id\":\"uM0INOlSrx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Stocks Balance\",\"col\":3}}]",
+  "custom_blocks": [],
+  "docstatus": 0,
+  "doctype": "Workspace",
+  "for_user": "",
+  "hide_custom": 0,
+  "icon": "organization",
+  "indicator_color": "green",
+  "is_hidden": 0,
+  "label": "Warehouse management system",
+  "links": [],
+  "modified": "2024-09-09 11:20:21.932220",
+  "module": null,
+  "name": "Warehouse management system",
+  "number_cards": [],
+  "parent_page": "",
+  "public": 1,
+  "quick_lists": [],
+  "restrict_to_domain": null,
+  "roles": [],
+  "sequence_id": 31.0,
+  "shortcuts": [
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Product",
+    "link_to": "Product",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Stocks Ledger Entry",
+    "link_to": "Stocks Ledger Entry",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Stocks Entry",
+    "link_to": "Stocks Entry",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Warehouse",
+    "link_to": "Warehouse",
+    "restrict_to_domain": null,
+    "stats_filter": "[]",
+    "type": "DocType",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Stocks Ledger",
+    "link_to": "Stocks Ledger",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Report",
+    "url": null
+   },
+   {
+    "color": "Grey",
+    "doc_view": "List",
+    "format": null,
+    "icon": null,
+    "kanban_board": null,
+    "label": "Stocks Balance",
+    "link_to": "Stocks Balance",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "Report",
+    "url": null
+   }
+  ],
+  "title": "Warehouse management system"
  },
  {
   "charts": [],
@@ -14767,7 +14872,7 @@
     "type": "Link"
    }
   ],
-  "modified": "2024-09-03 06:39:08.394246",
+  "modified": "2024-09-09 11:14:21.877748",
   "module": "Core",
   "name": "Build",
   "number_cards": [],
