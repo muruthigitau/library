@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{product} - {posting_datetime}",
+ "creation": "2024-09-07 16:57:56.467714",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "product",
+  "posting_datetime",
+  "column_break_culu",
+  "warehouse",
+  "entry_type",
+  "section_break_qhzb",
+  "quantity",
+  "stock_value_before_transaction",
+  "moving_average_cost",
+  "column_break_nluj",
+  "valuation_rate",
+  "stock_value_after_transaction",
+  "total_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Product",
+   "options": "Product",
+   "reqd": 1
+  },
+  {
+   "fieldname": "posting_datetime",
+   "fieldtype": "Datetime",
+   "label": "Posting Datetime",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_culu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valuation_rate",
+   "fieldtype": "Currency",
+   "label": "Valuation Rate"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "entry_type",
+   "fieldtype": "Select",
+   "label": "Entry Type",
+   "options": "Receipt\nConsume\nTransfer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_qhzb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "stock_value_before_transaction",
+   "fieldtype": "Currency",
+   "label": "Stock Value Before Transaction",
+   "read_only": 1
+  },
+  {
+   "fieldname": "moving_average_cost",
+   "fieldtype": "Currency",
+   "label": "Moving Average Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_nluj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_value",
+   "fieldtype": "Currency",
+   "label": "Total Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_value_after_transaction",
+   "fieldtype": "Currency",
+   "label": "Stock Value After Transaction",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-09 09:21:45.809306",
+ "modified_by": "Administrator",
+ "module": "Warehouse Management System",
+ "name": "Stocks Ledger Entry",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
